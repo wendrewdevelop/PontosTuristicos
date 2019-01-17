@@ -4,5 +4,7 @@ from atracoes.models import Atracao
 from atracoes.api.serializers import AtracaoSerializer
 
 class AtracaoViewset(ModelViewSet):
-    queryset = Atracao.objects.all()
     serializer_class = AtracaoSerializer
+
+    def get_queryset(self):
+        return Atracao.objects.all()
