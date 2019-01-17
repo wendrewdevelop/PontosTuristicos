@@ -25,11 +25,11 @@ from comentarios.api.viewsets import ComentarioViewset
 from avaliacoes.api.viewsets import AvaliacaoViewset
 
 router = routers.DefaultRouter()
-router.register(r'pontoturistico', PontoTuristicoViewset)
-router.register(r'atracoes', AtracaoViewset)
-router.register(r'endereco', EnderecoViewset)
-router.register(r'comentarios', ComentarioViewset)
-router.register(r'avaliacoes', AvaliacaoViewset)
+router.register(r'pontoturistico', PontoTuristicoViewset, base_name = 'PontoTuristico')
+router.register(r'atracoes', AtracaoViewset, base_name = 'Atracao')
+router.register(r'endereco', EnderecoViewset, base_name = 'Endereco')
+router.register(r'comentarios', ComentarioViewset, base_name = 'Comentario')
+router.register(r'avaliacoes', AvaliacaoViewset, base_name = 'Avaliacao')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
