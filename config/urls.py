@@ -21,11 +21,13 @@ from rest_framework import routers
 from pontos_turisticos.api.viewsets import PontoTuristicoViewset
 from atracoes.api.viewsets import AtracaoViewset
 from endereco.api.viewsets import EnderecoViewset
+from comentarios.api.viewsets import ComentarioViewset
 
 router = routers.DefaultRouter()
 router.register(r'pontoturistico', PontoTuristicoViewset)
 router.register(r'atracoes', AtracaoViewset)
 router.register(r'endereco', EnderecoViewset)
+router.register(r'comentarios', ComentarioViewset)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
