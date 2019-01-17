@@ -7,6 +7,7 @@ from pontos_turisticos.api.serializers import PontoTuristicoSerializer
 
 class PontoTuristicoViewset(ModelViewSet):
     serializer_class = PontoTuristicoSerializer
+    filter_fields = '__all__'
 
     def get_queryset(self):
         #Definindo parametros de busca
