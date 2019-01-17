@@ -4,5 +4,7 @@ from avaliacoes.models import Avaliacao
 from avaliacoes.api.serializers import AvaliacaoSerializer
 
 class AvaliacaoViewset(ModelViewSet):
-    queryset = Avaliacao.objects.all()
     serializer_class = AvaliacaoSerializer
+
+    def get_queryset(self):
+        return Avaliacao.objects.all()
