@@ -14,7 +14,7 @@ class PontoTuristicoViewset(ModelViewSet):
     def get_queryset(self):
         #Definindo parametros de busca
         '''
-            O paramêtro poderia ser definido como uma lista, poreḿ
+            O paramêtro poderia ser definido como uma lista, porém
             se não fosse preenchido o sistema apresentaria um erro.
 
             id = self.request.query_params['id']
